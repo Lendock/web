@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Lendock</title>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="css/master.css"/>
+</head>
+<body class="bg-filter">
+<header>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid padding0">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="menu-logo">
+                    <a href="index.html"><img class="" src="img/lendock-logo.png"></a>
+                </div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right no-margin-left">
+                    <li class="bar-section">
+                        <a class="padding0" href="#">
+                            <div class="bar-icon">
+                                <img src="img/borrow-icon.png">
+                            </div>
+                            <div class="navt">
+                                My Borrowings
+                            </div>
+                        </a>
+                    </li>
+                    <li id="messagesDown" class="bar-section dropdown">
+                        <a id="dLabel" href="#" class="dropdown-toggle padding0" data-toggle="dropdown" role="button"
+                           data-target="#" aria-haspopup="true"
+                           aria-expanded="false">
+                            <div class="bar-icon">
+                                <span class="badge-bar">8</span>
+                                <img src="img/messages.png">
+                            </div>
+                            <div class="navt">
+                                Notifications<span class="caret"></span>
+                            </div>
+                        </a>
+                        <ul id="notificationTabs" class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                            <ul class="nav nav-tabs">
+                                <li class="notification-tab"><a href="inbox.html">Messages <span class="badge-message">4</span></a></li>
+                                <li class="notification-tab"><a href="alerts.html">Alerts <span class="badge">4</span></a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="messages" class="tab-pane fade in active">
+                                    <ul class="padding0 ul-scroll">
+                                        <a href="#">
+                                            <li class="notification-message newMessage">
+                                                <div class="row">
+                                                    <div class="col-xs-4"><img src="img/ramiz.png"
+                                                                               style="height: 45px; width:45px;"
+                                                                               class="round-photo"></div>
+                                                    <div class="col-xs-8"><span class="notification-sender-name">Ramiz sent you a message</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </a>
+                                        <a href="#">
+                                            <li class="notification-message">
+                                                <div class="row">
+                                                    <div class="col-xs-4"><img src="img/magnifier.png"
+                                                                               style="height: 45px; width:45px;"
+                                                                               class="round-photo"></div>
+                                                    <div class="col-xs-8"><span class="notification-sender-name">Magnifier sent you a message</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </a>
+                                        <a href="#">
+                                            <li class="notification-message">
+                                                <div class="row">
+                                                    <div class="col-xs-4"><img src="img/questions1.png"
+                                                                               style="height: 45px; width:45px;"
+                                                                               class="round-photo"></div>
+                                                    <div class="col-xs-8"><span class="notification-sender-name">Question sent you a message</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </a>
+                                        <a href="#">
+                                            <li class="notification-message">
+                                                <div class="row">
+                                                    <div class="col-xs-4"><img src="img/questions1.png"
+                                                                               style="height: 45px; width:45px;"
+                                                                               class="round-photo"></div>
+                                                    <div class="col-xs-8"><span class="notification-sender-name">Question sent you a message</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </a>
+                                    </ul>
+                                </div>
+                                <div id="alert" class="tab-pane fade">
+                                    <ul class="padding0 ul-scroll">
+                                        <a href="#">
+                                            <li class="notification-message newAlert">
+                                                <div class="row">
+                                                    <div class="col-xs-4"><img
+                                                            src="img/bmw/2015-BMW-M3-sedan-301-876x535.jpg"
+                                                            style="height: 45px; width:45px;" class="round-photo"></div>
+                                                    <div class="col-xs-8"><span class="notification-sender-name">Agahuseyn sent you request</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </a>
+                                        <a href="#">
+                                            <li class="notification-message requestDeclined">
+                                                <div class="row">
+                                                    <div class="col-xs-4"><img
+                                                            src="img/bmw/2015-BMW-M3-sedan-320-876x535.jpg"
+                                                            style="height: 45px; width:45px;" class="round-photo"></div>
+                                                    <div class="col-xs-8"><span class="notification-sender-name">Javad declined request</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </a>
+                                        <a href="#">
+                                            <li class="notification-message requestAccepted">
+                                                <div class="row">
+                                                    <div class="col-xs-4"><img
+                                                            src="img/bmw/2015-BMW-M3-sedan-301-876x535.jpg"
+                                                            style="height: 45px; width:45px;" class="round-photo"></div>
+                                                    <div class="col-xs-8"><span class="notification-sender-name">Iskandar accepted request</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="bar-section dropdown">
+                        <a href="#" class="dropdown-toggle padding0" data-toggle="dropdown" role="button"
+                           aria-haspopup="true"
+                           aria-expanded="false">
+                            <div class="bar-icon">
+                                <img src="img/user.png">
+                            </div>
+                            <div class="navt">
+                                Profile<span class="caret"></span>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Wishlist</a></li>
+                            <li><a href="#">Dock</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Sign Out</a></li>
+                        </ul>
+                    </li>
+                    <li class="bar-section-green">
+                        <a class="padding0" href="#">
+                            <div class="bar-icon">
+                                <img src="img/add_item.png">
+                            </div>
+                            <div class="navtw">
+                                Add Car
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</header>
+<section id="invoice">
+<div class="container">
+    <div class="row margin-top-65">
+        <div class="col-sm-3 col-md-3 invoice-date">03 April 2016<h6>Transaction ID: #73120417</h6></div>
+        <div class="col-sm-3 col-md-3 invoice-date">Lendock, Azerbaijan, Ahmad Rajabli 153, ATL Building, SUP</div>
+        <div class="col-sm-3 col-md-3 col-md-offset-3"><img style="height: 50px" src="img/lendock-text-dark.png"></div>
+    </div>
+</div>
+<div class="container margin-top-15 margin-bottom-20 bg-white invoice-border" >
+    <div class="row">
+        <div class="col-xs-6">
+            <h3>Customer Invoice</h3>
+        </div>
+        <div class="col-xs-6">
+            <button style="margin-top:14px;" class="float-right button-white no-after" id="printButton" onclick='printDiv(invoice);'>Print</button>
+        </div>
+    </div><hr>
+    <div class="row">
+        <div class="col-xs-6 col-sm-3 col-md-3"><h6 class="light-dark">Borrower Name</h6><a href="#borrower-profile">Ramiz</a></div>
+        <div class="col-xs-6 col-sm-3 col-md-3"><h6 class="light-dark">Car info</h6><p>BWM M6 2013, 10-UU-823</p></div>
+        <div class="col-xs-6 col-sm-3 col-md-3"><h6 class="light-dark">Listing ID</h6><p>#357141</p></div>
+        <div class="col-xs-6 col-sm-3 col-md-3"><h6 class="light-dark">Duration</h6><p>2 Days</p></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-3 col-md-3"><h6 class="light-dark">Lender Name</h6><a href="#lender-profile">Agahuseyn</a></div>
+        <div class="col-xs-6 col-sm-3 col-md-3"><h6 class="light-dark">Contact</h6><p>+994 50 4278586</p></div>
+        <div class="col-xs-6 col-sm-3 col-md-3"><h6 class="light-dark">Start Date</h6><p>10 April 2016</p></div>
+        <div class="col-xs-6 col-sm-3 col-md-3"><h6 class="light-dark">End Date</h6><p>12 April 2016</p></div>
+    </div>
+    <hr>
+    <!--Charges Display-->
+    <h3>Charges</h3>
+    <table class="table table-bordered">
+        <tr>
+            <td>Per Day</td>
+            <td>$80</td>
+        </tr>
+        <tr>
+            <td>$80 x 2</td>
+            <td>$160</td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td>$160</td>
+        </tr>
+    </table>
+</div>
+</section>
+<footer class="b-footer">
+    <a id="to-top" href="#this-is-top"><i class="fa fa-chevron-up"></i></a>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4">
+                <div class="b-footer__company wow fadeInLeft" data-wow-delay="0.3s">
+                    <div class="b-nav__logo">
+                        <a href="home.html"><img class="footer-logo" src="img/LendockText.png" </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-8">
+                <div class="b-footer__content wow fadeInRight" data-wow-delay="0.3s">
+                    <div class="b-footer__content-social">
+                        <a href="#"><span class="fa fa-facebook-square"></span></a>
+                        <a href="#"><span class="fa fa-twitter-square"></span></a>
+                        <a href="#"><span class="fa fa-google-plus-square"></span></a>
+                        <a href="#"><span class="fa fa-instagram"></span></a>
+                        <a href="#"><span class="fa fa-youtube-square"></span></a>
+                        <a href="#"><span class="fa fa-skype"></span></a>
+                    </div>
+                    <nav class="b-footer__content-nav">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Terms of Privacy & Policy</a></li>
+                            <li><a href="#">Legal</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 lendock-footer-copy">
+                &#169; Lendock
+            </div>
+        </div>
+    </div>
+</footer><!--b-footer-->
+
+<script src="js/vendor/jquery.min.js"></script>
+<script src="js/vendor/what-input.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/foundation.min.js"></script>
+<script src="js/app.js"></script>
+<script>
+    $('#notificationTabs').on('click', '.nav-tabs a', function () {
+        $(this).closest('.dropdown').addClass('dontClose');
+    })
+
+    $('#messagesDown').on('hide.bs.dropdown', function (e) {
+        if ($(this).hasClass('dontClose')) {
+            e.preventDefault();
+        }
+        $(this).removeClass('dontClose');
+    });
+</script>
+<script>
+    function printDiv(invoice) {
+        var printContents = document.getElementById('invoice').innerHTML;
+        var originalContents = document.body.innerHTML;
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+    }
+</script>
+</body>
+</html>
