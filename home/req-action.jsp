@@ -15,7 +15,7 @@
         <jsp:include page="/header.jsp" />
         <div class="container">
             <div class="row margin-top-65">
-                <div class="col-sm-3 col-md-2">
+                <div class="col-xs-12 col-sm-3 col-md-2">
                     <ul class="nav nav-pills nav-stacked dashboard-tabs" id="example-vert-tabs">
                         <li class="tabs-title"><a href="/home/profile.jsp"><img class="tabs-icons" src="../img/profile.png"><br>Profile</a>
                         </li>
@@ -31,7 +31,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="col-xs-12 col-sm-5 col-md-6">
                     <div class="chat-wrapper">
                         <div class="menu">
                             <div class="back">
@@ -47,13 +47,13 @@
                         </div>
                         <c:set var="request" value="${requestScope.request}" />
                         <div class="mes-field">
-                            <div class="row no-margin no-gutter">
+                            <div class="row no-margin no-gutter no-padding-left">
                                 <form action="/NewMessage" method="post" name="send-message">
-                                    <div class="col-xs-9 col-md-10">
+                                    <div class="col-xs-9 col-sm-9 col-md-10 no-padding-left">
                                         <input type="hidden" value="${param.rid}" name="rid" id="rid" >
                                         <input name="message" class="textarea" type="text" placeholder="Type here!"/>
                                     </div>
-                                    <div class="col-xs-3 col-md-2">
+                                    <div class="col-xs-3 col-sm-3 col-md-2 no-padding-left">
                                         <button class="send-message">Send</button>
                                     </div>
                                 </form>
@@ -64,12 +64,12 @@
 
                 <div class="col-xs-12 col-sm-4 col-md-4">
                     <div class="row margin-top-15">
-                        <div class="col-xs-3 col-md-2">
+                        <div class="col-xs-3 col-md-3 col-lg-2 ">
                             <div class="request-borrower-avatar">
                                 <img src="/data/users/${request.requester.photo}" id="borrower-photo" class="circular-borrowers">
                             </div>
                         </div>
-                        <div class="col-xs-9 col-md-10">
+                        <div class="col-xs-9 col-md-9 col-lg-10">
                             <div class="request-borrower-title">
                                 <a href="#" id="borrower-name">You</a>
                                 <span>&nbsp;requested</span>

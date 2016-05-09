@@ -317,8 +317,8 @@ input.textarea {
     background: #fafafa;
     border: none;
     outline: none;
-    padding-left: 55px;
-    padding-right: 55px;
+    padding-left: 20px;
+    padding-right: 20px;
     color: #666;
     font-weight: 400;
     display: inline-block;
@@ -1003,7 +1003,10 @@ td .ui-datepicker-unselectable .ui-state-disabled {
     padding-bottom: 0px;
     padding-top: 0px;
 }
-
+.no-padding-left{
+    padding-left: 0px;
+    padding-right:0px;
+}
 .no-bottom-margin {
     margin-bottom: 0px;
 }
@@ -1621,7 +1624,6 @@ textarea[name=message] {
 }
 
 .request-borrower-avatar {
-    max-width: 15%;
     display: inline-block;
     margin-right: 10px;
 }
@@ -1634,7 +1636,8 @@ textarea[name=message] {
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
-    max-height: 40px;
+    height: 50px;
+    width:50px;
 }
 
 .request-borrower-title {
