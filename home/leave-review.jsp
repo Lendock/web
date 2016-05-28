@@ -3,6 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <link rel="icon" type="image/png" href="/img/lendock-favicon.png">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Lendock</title>
@@ -41,7 +42,7 @@
             </div>
         </div>
     </div>
-<jsp:include page="/footer.html" />
+<jsp:include page="/footer.jsp" />
     <script src="js/owl.carousel.min.js"></script>
     <script>
         $(function(){
@@ -49,7 +50,7 @@
                     $(".circular-borrowers").attr("src", "/data/users/" + data.listing.car.Owner.photo);
                     $("#user").html(data.listing.car.Owner.fName + " " + data.listing.car.Owner.lName);    
                     $(".listing-name").html(data.listing.car.Model.make.name + " " + data.listing.car.Model.name);
-                    $("#listing").val(data.listing.listingId);
+                    $("#listing").val(data.listing.id);
                 });
         });
     </script>

@@ -1,5 +1,4 @@
 <header>
-    <link rel="icon" type="image/png" href="/img/lendock-favicon.png">
     <link rel="stylesheet" href="/css/bootstrap.css"/>
     <link rel="stylesheet" href="/css/bootstrap.offcanvas.min.css"/>
     <link rel="stylesheet" href="/css/font-awesome.min.css"/>
@@ -84,13 +83,13 @@
                             <form method="get" action="/SearchResult">
                                 <div class="col-xs-6">
                                     <div class="form-group">
-                                        <label for="sdate">Pick date</label>
+                                        <label for="sdate">Götürülmə Tarixi</label>
                                         <input readonly type="text" name="date-min" class="form-control span2 no-bottom-margin" value="" id="sdateH">
                                     </div>
                                 </div>
                                 <div class="col-xs-6">
                                     <div class="form-group">
-                                        <label for="edate">Drop date</label>
+                                        <label for="edate">Qaytarılma Tarixi</label>
                                         <input readonly type="text" name="date-max" class="form-control span2 no-bottom-margin" value="" id="edateH">
                                     </div>
                                 </div>
@@ -128,6 +127,7 @@
                     <li><a href="/GetAllRequests">Mesajlar <span class="badge-message">0</span></a></li>
                     <li><a href="/GetAlerts">Bildirişlər <span class="badge">0</span></a></li>
                     <li><hr></li>
+                    <li><a href="/GetAllRequests">Müraciətlər</a></li>
                     <li><a href="/GetWishlist">Wishlist</a></li>
                     <li><a href="/home/profile.jsp">Profil</a></li>
                     <li><a href="/home/settings.jsp">Parameterlər</a></li>
@@ -143,7 +143,7 @@
                                 <img src="/img/borrow-icon.png">
                             </div>
                             <div class="navt">
-                                My Borrowings
+                                Sifarişlərim
                             </div>
                         </a>
                     </li>
@@ -156,24 +156,24 @@
                                 <img src="/img/messages.png">
                             </div>
                             <div class="navt">
-                                Notifications<span class="caret"></span>
+                                Bildirişlər<span class="caret"></span>
                             </div>
                         </a>
                         <ul id="notificationTabs" class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                             <ul class="nav nav-tabs nav-justified">
-                                <li class="notification-tab"><a href="#messages" data-toggle="tab">Messages <span class="badge-message">0</span></a></li>
-                                <li class="notification-tab"><a href="#alert" data-toggle="tab">Alerts <span class="badge">0</span></a></li>
+                                <li class="notification-tab"><a href="#messages" data-toggle="tab">Mesajlar <span class="badge-message">0</span></a></li>
+                                <li class="notification-tab"><a href="#alert" data-toggle="tab"> Bildirişlər<span class="badge">0</span></a></li>
                             </ul>
                             <div class="tab-content">
                                 <div id="messages" class="tab-pane fade in active">
                                     <ul class="padding0 ul-scroll" id="messagesIN">
-                                        No messages
+                                        Mesaj yoxdur
 
                                     </ul>
                                 </div>
                                 <div id="alert" class="tab-pane fade">
                                     <ul class="padding0 ul-scroll" id="alertIN">
-                                        No
+                                        Bildirişlər yoxdur
                                     </ul>
                                 </div>
                             </div>
@@ -187,17 +187,18 @@
                                 <img src="/img/user.png">
                             </div>
                             <div class="navt">
-                                Profile<span class="caret"></span>
+                                Profil<span class="caret"></span>
                             </div>
                         </a>
                         <ul class="dropdown-menu">
+                            <li><a href="/GetAllRequests">Müraciətlər</a></li>
                             <li><a href="/GetWishlist">Wishlist</a></li>
                             <li><a href="/AllMyCars">Dock</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="/home/profile.jsp">Profile</a></li>
-                            <li><a href="/home/settings.jsp">Settings</a></li>
-                            <li><a href="#">Help</a></li>
-                            <li><a href="/LogoutServlet">Sign Out</a></li>
+                            <li><a href="/home/profile.jsp">Profil</a></li>
+                            <li><a href="/home/settings.jsp">Tənzimləmələr</a></li>
+                            <li><a href="#">Yardım</a></li>
+                            <li><a href="/LogoutServlet">Çıxış</a></li>
                         </ul>
                     </li>
                     <li class="bar-section-green">
@@ -206,7 +207,7 @@
                                 <img src="/img/add_item.png">
                             </div>
                             <div class="navtw">
-                                Add Car                              
+                                Avto Əlavə Et                             
                             </div>
                         </a>
                     </li>

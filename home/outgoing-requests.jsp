@@ -4,10 +4,10 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
+        <link rel="icon" type="image/png" href="/img/lendock-favicon.png">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Sent Requests</title>
-        <link rel="shortcut icon" href="/assets/img/favicon.png"> 
         <link rel="stylesheet" href="/assets/css/foundation-datepicker.min.css"/>
     </head>
     <body class="bg-filter margin-top-15">
@@ -23,12 +23,12 @@
                     <div class="profile-link">
                         <a href="#">
                             <img src="/assets/img/avatar83.png">
-                            <span>View Profile</span>
+                            <span>Profilə bax</span>
                         </a>
                     </div>
                 </div>
                 <div class="small-4 columns request-details text-center">
-                    Request  details
+                    Sifariş məlumatlari
                 </div>
             </div>
         </c:if>
@@ -48,17 +48,17 @@
                             <c:choose>
                                 <c:when test="${request.status == 0}">
                                     <div class="request-status">
-                                        <font color="gray" >Waiting</font>
+                                        <font color="gray" >Qözləyir</font>
                                     </div>
                                 </c:when>
                                 <c:when test="${request.status == 1}">
                                     <div class="request-status">
-                                        <font color="green" >Accepted</font>
+                                        <font color="green" >Qəbul</font>
                                     </div>
                                 </c:when>
                                 <c:when test="${request.status == 2}">
                                     <div class="request-status">
-                                        <font color="red" >Rejected</font>
+                                        <font color="red" >İmtina</font>
                                     </div>
                                 </c:when>
                             </c:choose>
@@ -83,7 +83,7 @@
                             </div>
                             <div class="small-2 columns">
                                 <div class="message-send-btn">
-                                    <button type="submit" class="send-btn">Send</button>
+                                    <button type="submit" class="send-btn">Göndər</button>
                                 </div>
                             </div>       ​
                         </div>

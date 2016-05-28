@@ -4,6 +4,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8"/>
+        <link rel="icon" type="image/png" href="/img/lendock-favicon.png">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Lendock</title>
@@ -14,7 +15,7 @@
                 <jsp:include page="/header.jsp" />
             </c:when>
             <c:otherwise>
-                <jsp:include page="/header-no-login.html" />
+                <jsp:include page="/header-no-login.jsp" />
             </c:otherwise>
         </c:choose>
         <div class="container">
@@ -46,7 +47,7 @@
                 </div>
             </div>
         </div>
-<jsp:include page="/footer.html" />
+<jsp:include page="/footer.jsp" />
         <script>
              $(function () {
                 $.getJSON("/GetUser?uid=${param.uid}", function (data) {
@@ -78,7 +79,7 @@
                 });
                 $.getJSON("/GetListings?uid=${param.uid}", function (data) {
                     $.each(data, function (key, val) {
-                        $("#listings").append("<div class='col-xs-6'> <div class='item-box'> <a href='GetListing?id=" + val.listingId + "'> <div class='image-box' style='background-image: url(/data/cars/" + val.car.Photos[0] + ")'> <div class='item-price'> " + val.price + "<span class='azn'>M</span>/per day </div></div></a> <div class='title-box'> <span class='item-title'> " + val.car.Model.make.name + " " + val.car.Model.name + " " + val.car.manufactureYear.year +" </span> <span class='wishlist-button'> <button type='button' class='no-border'> <img src='img/favorite21.png'> </button> </span> </div><div class='item-specs'> <div class='specs-icon'> <img src='img/silhouette42.png'> <span class='specs-detail'>" + val.car.seatsNumber  + " seats</span> </div><div class='specs-icon'> <img src='img/stacked9.png'> <span class='specs-detail'>" + val.car.carType.name + "</span> </div><div class='specs-icon'> <img src='img/fuel19.png'> <span class='specs-detail'>" + val.car.fuelType.name + "</span> </div><div class='specs-icon'> <img src='img/driving2.png'> <span class='specs-detail'>" + val.car.transmission.name +  "</span> </div></div></div></div>");
+                        $("#listings").append("<div class='col-xs-6'> <div class='item-box'> <a href='GetListing?id=" + val.id + "'> <div class='image-box' style='background-image: url(/data/cars/" + val.car.Photos[0] + ")'> <div class='item-price'> " + val.price + "<span class='azn'>M</span>/per day </div></div></a> <div class='title-box'> <span class='item-title'> " + val.car.Model.make.name + " " + val.car.Model.name + " " + val.car.manufactureYear.year +" </span> <span class='wishlist-button'> <button type='button' class='no-border'> <img src='img/favorite21.png'> </button> </span> </div><div class='item-specs'> <div class='specs-icon'> <img src='img/silhouette42.png'> <span class='specs-detail'>" + val.car.seatsNumber  + " seats</span> </div><div class='specs-icon'> <img src='img/stacked9.png'> <span class='specs-detail'>" + val.car.carType.name + "</span> </div><div class='specs-icon'> <img src='img/fuel19.png'> <span class='specs-detail'>" + val.car.fuelType.name + "</span> </div><div class='specs-icon'> <img src='img/driving2.png'> <span class='specs-detail'>" + val.car.transmission.name +  "</span> </div></div></div></div>");
                     });
                     $(".message-amount").html(data.length);
                 });

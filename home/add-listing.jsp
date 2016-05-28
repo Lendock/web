@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="icon" type="image/png" href="/img/lendock-favicon.png">
         <meta charset="utf-8"/>
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -19,20 +20,20 @@
         </script>
         <form action="/NewListing" method="post">
             <div class="container margin-top-65">
-                <h1 class="center">Create Your Listing</h1>
-                <h2 class="center">Lendock provides opportunity for everyone to earn money. Just list your vehicle and wait for requests. The more you share your listing on Social Media, the faster you get the requests.</h2>
+                <h2 class="center">Elan əlavə et</h1>
+                <h5 class="center">NV icarə etməklə sizin pul qazanma imkanınız olacaq. NV daxil edin, və icarəyə verməyə başlayın. Sosial Mediada paylaşsaz, onda sifarişləri daha tez əldə edə bilərsiniz.</h2>
                 <!---Title--->
 
                 <div class="row padding-top-bot">
                     <div class="col-xs-12 col-md-6">
                         <div class="form-group">
-                            <label for="manufacter">Select vehicle from Garage <span class="faded-text"></span></label>
+                            <label for="manufacter">NV seçin <span class="faded-text"></span></label>
                             <select id="cars" name="cars" class="form-control">
                             </select>
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-6">
-                        <label>Set price for listing<span class="faded-text"></span></label>
+                        <label>Qiymət (günlük)<span class="faded-text"></span></label>
                         <div class="form-group">
                             <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
                             <div class="input-group">
@@ -44,40 +45,37 @@
                     </div>
                 </div>
                 <!---Title-ENDS--->
-                <!---Description--->
+                
                 <div class="row padding-top-bot">
                     <div class="col-xs-12 col-md-6">
                         <div class="form-group">
-                            <label>Description<span class="faded-text"> 500 Characters Left</span></label>
+                            <label>Məlumat<span class="faded-text"> 500 Characters Left</span></label>
                             <textarea name="about" class="form-control" rows="3"></textarea>
-                            <p class="faded-text">Add information about your listing. The more info you provide about it, the bigger chances to attract clients. DO NOT WRITE YOUR CONTACT INFO HERE</p>
+                            <p class="faded-text">Elan haqda məlumat verin. ƏLAQƏ MƏLUMATLARINI BURADA QEYD ETMƏK OLMAZ</p>
                         </div>
                     </div>
-
-                
-                <!---Description-ENDS--->
                 
                     <div class="col-xs-12 col-md-6">
                         <div class="form-group">
-                            <label>Check only if this is car is suitable for wedding</label><br>
-                            <label><input type="checkbox" name="for-wedding" value="true" class=""/> For wedding</label>
+                            <label>Əlavə</label><br>
+                            <label><input type="checkbox" name="for-wedding" value="true" class=""/> Toy üçün</label>
                         </div>
                     </div>
                 </div>
                 <div class="row"><br/>
                     <div class="medium-offset-2 medium-7 column center medium-centered">
-                        <h5>Press Submit to make your listing online.</h5>
+                        
                     </div>
-                    <div class="col-xs-offset-2 col-xs-4">
+                    <div class="col-xs-3">
                         
                     </div>
                     <div class="col-xs-4">
-                        <button class="btn btn-success add-item-submit">Submit</button>
+                        <button class="btn btn-success add-item-submit">Əlavə et</button>
                     </div>
-                    <br><br/>
-                    <p class="text-muted">Lendock has right to deactivate your listing if it doesn't follow the website rules. More info</p>
+                    <br><br><br><br><br>
+                    <p class="text-muted">NV platformanın qaydalarına uyğun olmadığı halda Lendock elanı deaktiv etmək hüququna malikdir. Ətraflı</p>
                 </div>
             </div>
-<jsp:include page="/footer.html" />
+<jsp:include page="/footer.jsp" />
     </body>
 </html>

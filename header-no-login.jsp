@@ -44,17 +44,17 @@
                                 <img src="/img/login.png">
                             </div>
                             <div class="navt">
-                                Log in
+                                Giriş
                             </div>
                         </a>
                     </li>
                     <li class="bar-section-green">
-                        <a class="padding0" href="/signup.html">
+                        <a class="padding0" href="/signup.jsp">
                             <div class="bar-icon">
                                 <img src="/img/signup.png">
                             </div>
                             <div class="navtw">
-                                Sign up                             
+                                Qeydiyyadan keç                             
                             </div>
                         </a>
                     </li>

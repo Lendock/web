@@ -5,6 +5,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8"/>
+        <link rel="icon" type="image/png" href="/img/lendock-favicon.png">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Lendock</title>
@@ -15,17 +16,16 @@
             <div class="row margin-top-65">
                 <div class="col-sm-3 col-md-2">
                     <ul class="nav nav-pills nav-stacked dashboard-tabs" id="example-vert-tabs">
-                        <li class="tabs-title"><a href="/home/profile.jsp"><img class="tabs-icons" src="../img/profile.png"><br>Profile</a>
+                        <li class="tabs-title"><a href="/home/profile.jsp"><img class="tabs-icons" src="../img/profile.png"><br>Profil</a>
                         </li>
                         <li class="tabs-title active"><a href="/GetOutgoingRequests"><img class="tabs-icons"
-                                                                                          src="../img/borrow-icon-white.png"><br>My
-                                Borrowings</a></li>
+                                                                                          src="../img/borrow-icon-white.png"><br>Sifarishlərim</a></li>
                         <li class="tabs-title"><a href="/AllMyCars"><img class="tabs-icons"
                                                                          src="../img/vehicle.png"><br>Dock</a></li>
                         <li class="tabs-title"><a href="/GetWishlist"><img class="tabs-icons" src="../img/wishlist.png"><br>Wishlist</a>
                         </li>
                         <li class="tabs-title"><a href="/home/settings.jsp"><img class="tabs-icons"
-                                                                                 src="../img/tool.png"><br>Settings</a>
+                                                                                 src="../img/tool.png"><br>Tənzimləmələr</a>
                         </li>
                     </ul>
                 </div>
@@ -36,25 +36,25 @@
                             <div class="col-sm-6 col-md-4 margin-bottom-20">
                                 <div class="borrowing-box">
                                     <div class="image-panel">
-                                        <a href="/GetListing?id=${request.listing.listingId}">
+                                        <a href="/GetListing?id=${request.listing.id}">
                                             <div class="borrowing-list-image" style="background-image: url('/data/cars/${request.listing.car.photos[1]}');"></div>
                                         </a>
                                     </div>
                                     <div class="text-center">
                                         <h6>${request.listing.car.model.make.name} ${request.listing.car.model.name} ${request.listing.car.manufactureYear}</h6>
                                         <div class="invoice-date"><fmt:formatDate type="date" value="${request.sDate}" /> - <fmt:formatDate type="date" value="${request.eDate}" /></div>
-                                        <a href="/home/req-action.jsp?rid=${request.rId}" class="btn btn-default margin-top-15" >View chat</a>
+                                        <a href="/home/req-action.jsp?rid=${request.rId}" class="btn btn-default margin-top-15">Əlaqə qur</a>
                                         <c:choose>
                                             <c:when test="${request.status == 1}">
                                                 <a class="btn margin-top-15 btn-warning" href="leave-review.jsp?rid=${request.rId}">Leave review</a>
                                                 <a href="../invoice.html" class="view-invoice">Transaction info</a><!--only completed request has invoice-->
-                                                <div class="green-color"><i class="green-color fa fa-check-circle-o"></i> Request accepted</div>
+                                                <div class="green-color"><i class="green-color fa fa-check-circle-o"></i> Sifariş təsdiqləndi</div>
                                             </c:when>
                                             <c:when test="${request.status == 2}">
-                                                <div class="red-color"><i class="red-color fa fa-times-circle-o"></i> Request rejected</div>
+                                                <div class="red-color"><i class="red-color fa fa-times-circle-o"></i> Imtina</div>
                                             </c:when>
                                             <c:when test="${request.status == 0}">
-                                                <div class="yellow-color"><i class="yellow-color fa fa-clock-o"></i> Request waiting</div>
+                                                <div class="yellow-color"><i class="yellow-color fa fa-clock-o"></i> Gözlənilir</div>
                                             </c:when>
                                         </c:choose>
                                         <!--state of icon changes according to state of request, see other examples below too-->
@@ -67,7 +67,7 @@
 
             </div>
         </div>
-<jsp:include page="/footer.html" />
+<jsp:include page="/footer.jsp" />
         <script>
             $('#notificationTabs').on('click', '.nav-tabs a', function () {
                 $(this).closest('.dropdown').addClass('dontClose');

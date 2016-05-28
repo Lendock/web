@@ -8,9 +8,19 @@ html {
     font-family: "Gotham";
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+   
+}
+#wrapper {
+	min-height:100%;
+	position:relative;
+}
+#footer {
+
 }
 body {
-    margin: 0;
+    	margin:0;
+	padding:0;
+	height:100%;
 }
 article,
 aside,
@@ -4244,7 +4254,7 @@ a.badge:focus {
     padding-bottom: 30px;
     margin-bottom: 30px;
     color: inherit;
-    background-color: #eee;
+    background-color: #358CCE;
 }
 .jumbotron h1,
 .jumbotron .h1 {

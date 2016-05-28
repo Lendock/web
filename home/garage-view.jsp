@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="icon" type="image/png" href="/img/lendock-favicon.png">
         <meta charset="utf-8"/>
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -15,16 +16,15 @@
             <div class="row margin-top-65">
                 <div class="col-sm-3 col-md-2">
                     <ul class="nav nav-pills nav-stacked dashboard-tabs" id="example-vert-tabs">
-                        <li class="tabs-title"><a href="/home/profile.jsp"><img class="tabs-icons" src="../img/profile.png"><br>Profile</a>
+                        <li class="tabs-title"><a href="/home/profile.jsp"><img class="tabs-icons" src="../img/profile.png"><br>Profil</a>
                         </li>
                         <li class="tabs-title"><a href="/GetOutgoingRequests"><img class="tabs-icons"
-                                                                                   src="../img/borrow-icon.png"><br>My
-                                Borrowings</a></li>
+                                                                                   src="../img/borrow-icon.png"><br>Sifarişlərim</a></li>
                         <li class="tabs-title active"><a href="/AllMyCars"><img class="tabs-icons"
                                                                                 src="../img/vehicle-white.png"><br>Dock</a></li>
                         <li class="tabs-title"><a href="/GetWishlist"><img class="tabs-icons" src="../img/wishlist.png"><br>Wishlist</a>
                         </li>
-                        <li class="tabs-title"><a href="/home/settings.jsp"><img class="tabs-icons" src="../img/tool.png"><br>Settings</a>
+                        <li class="tabs-title"><a href="/home/settings.jsp"><img class="tabs-icons" src="../img/tool.png"><br>Tənzimləmələr</a>
                         </li>
                     </ul>
                 </div>
@@ -32,7 +32,7 @@
                     <div class="col-sm-9 col-md-10">
                         <div class="menu">
                             <div class="back">
-                                <a href="/AllMyCars"><i style="color:#fff;" class="fa fa-arrow-left"></i><span> Back to Garage</span></a>
+                                <a href="/AllMyCars"><i style="color:#fff;" class="fa fa-arrow-left"></i><span> Garaja qayıt</span></a>
                                 <!--img src="/img/ramiz.jpg" draggable="false"/-->
                             </div>
                             <!--div class="name">Ramiz Ismayilov</div>
@@ -41,10 +41,9 @@
                         <!---img upload-->
                         <div class="row padding-top-bot">
                             <div class="col-xs-12">
-                                <h3>Upload photos of car</h3>
+                                <h3>Şəkil yüklə</h3>
                                 <div class="form-group">
-
-                                    <label for="uploadImage">Choose photos describing car at it's best</label>
+                                    <label for="uploadImage">6 istiqamətdən çəkilməlidir: Qabaq, Arxa, Sol tərəf, Sag tərəf, Alətlər paneli və Arxa oturacaqlar</label>
                                     <input type="hidden" name="id" value="${car.id}" />
                                     <input class="btn btn-default"  name="photo" value="Upload" type="file" multiple="true" id="uploadImage"/>
 
@@ -55,19 +54,19 @@
                         <div class="row">
                             <div class="col-xs-12 col-md-6">
                                 <div class="form-group">
-                                    <label for="manufacter">Manufacturer <span class="faded-text"></span></label>
+                                    <label for="manufacter">İstehsalçı <span class="faded-text"></span></label>
                                     <select disabled id="manufacter" class="form-control">
                                         <option>${car.model.make.name}</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="model">Car model <span class="faded-text"></span></label>
+                                    <label for="model">Model <span class="faded-text"></span></label>
                                     <select disabled id="model" class="form-control">
                                         <option>${car.model.name}</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label>Car make year <span class="faded-text"></span></label>
+                                    <label>NV istehsal ili <span class="faded-text"></span></label>
                                     <input disabled class="form-control" type="text" value="${car.manufactureYear}"/>
                                 </div>
                             </div>
@@ -105,7 +104,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-md-6">
                                 <div class="form-group">
-                                    <label>State registry number of car<span class="faded-text"></span></label>
+                                    <label>Dövlət Qeydiyyət Nişanı Nömrəsi<span class="faded-text"></span></label>
                                     <input disabled class="form-control" type="text" value="${car.registryNumber}" />
                                 </div>
                             </div>
@@ -113,7 +112,7 @@
 
                         <div class="row"><br/>
                             <div class="col-xs-12 center">
-                                <button type="submit" class="btn btn-success">Update</button>
+                                <button type="submit" class="btn btn-success">Yenilə</button>
                             </div>
                             <br><br/>
                         </div>
@@ -141,7 +140,7 @@
             </div>
         </div>
         <!--**** Modal ENDS ****-->
-        <jsp:include page="/footer.html" />
+        <jsp:include page="/footer.jsp" />
         <script>
             $('#notificationTabs').on('click', '.nav-tabs a', function () {
                 $(this).closest('.dropdown').addClass('dontClose');

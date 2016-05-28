@@ -11,7 +11,9 @@
     padding-right: 0;
     padding-left: 0;
 }
-
+.white{
+    color:#fff;
+}
 .wrap {
     position: relative;
 }
@@ -35,6 +37,7 @@
 .chat-wrapper {
     border: 1px solid #ccc;
     background-color: #fff;
+    height: 75vh;
 }
 
 .menu {
@@ -111,7 +114,7 @@
 /* M E S S A G E S */
 .messages-wrapper {
     overflow-y: auto;
-    max-height: 60vh;
+    height:100%;
 }
 
 .chat {
@@ -305,6 +308,7 @@ emoji {
 .mes-field {
     border-top: 1px #ccc solid;
     background-color: #fafafa;
+    margin-top: -51px;
 }
 
 input.textarea {
@@ -519,7 +523,7 @@ td .ui-datepicker-unselectable .ui-state-disabled {
     font-weight: bold;
     text-align: center;
     display: block;
-    padding-top: 43%;
+    padding-top: 35%;
 }
 
 .dark-overlay {
@@ -716,7 +720,15 @@ td .ui-datepicker-unselectable .ui-state-disabled {
     height: 62px;
     cursor: hand;
 }
-
+.menu-logo:hover{
+    background-color: #eee;
+}
+.bar-section:hover{
+    background-color:#eee;
+}
+.bar-section-green:hover{
+    background-color: #008F6E;
+}
 #notificationTabs {
     font-size: 12px;
     width: 250px;
@@ -798,15 +810,13 @@ td .ui-datepicker-unselectable .ui-state-disabled {
     background-color: #00B289;
     display: inline-block;
     border-left: 1px solid #cccccc;
-    width: 70px;
+    width: 120px;
     height: 62px;
     cursor: hand;
 }
-
 .bar-icon {
     height: 40px;
 }
-
 .bar-icon img {
     height: 36px;
     padding-top: 5px;
@@ -1086,7 +1096,7 @@ td .ui-datepicker-unselectable .ui-state-disabled {
     color: #fff;
     display: block;
     font-size: 15px;
-    width: 110px;
+    width: 125px;
     padding-top: 1px;
     padding-left: 3px;
 }
@@ -1327,12 +1337,17 @@ td .ui-datepicker-unselectable .ui-state-disabled {
 .border-bottom {
     border-bottom: 1px solid #ccc;
 }
-
+.black{
+    color:#000;
+}
 .calendar-calculator {
     width: 100%;
     position: relative;
 }
-
+#calendar .ui-datepicker-inline{
+    width: inherit;
+    max-width:768px
+}
 .calendar1 {
     height: 180px;
     background-color: #fff;
@@ -1410,7 +1425,6 @@ td .ui-datepicker-unselectable .ui-state-disabled {
     padding-bottom: 12px;
     padding-left: 25px;
     padding-right: 25px;
-
     color: #fff;
     float: left;
 }
@@ -1420,13 +1434,11 @@ td .ui-datepicker-unselectable .ui-state-disabled {
     border: 1px solid #cccccc;
     background-color: #fff;
     color: #00B289;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     padding-top: 12px;
     padding-bottom: 12px;
-    padding-left: 25px;
-    padding-right: 25px;
-    margin-right: 15px;
+   
     float: right;
 }
 
@@ -1961,12 +1973,10 @@ textarea[name=message] {
     text-align: center;
 
 }
-
 .dashboard-tabs li a {
     font-size: 15px;
     background-color: #fff;
 }
-
 .dashboard-circular-photo {
     background-size: cover;
     background-repeat: no-repeat;
@@ -1975,7 +1985,6 @@ textarea[name=message] {
     width: 150px;
     height: 150px;
 }
-
 .margin-top-65 {
     margin-top: 85px;
 }
@@ -1984,24 +1993,20 @@ textarea[name=message] {
 }
 .tabs-title {
     border: 1px solid #ccc;
-
 }
 .tabs-icons {
     margin-bottom: 5px;
     height: 45px;
 }
-
 .right-border {
     border-right: 1px solid #cccccc;
 }
-
 .dashboard-profile-name {
     font-size: 22px;
     margin-top: 20px;
     margin-bottom: 5px;
     display: block;
 }
-
 .dashboard-username {
     font-size: 13px;
     color: #9D9D9D;
@@ -2401,54 +2406,44 @@ textarea[name=message] {
 /*------ FOOOTER------*/
 /* Footer */
 .b-footer {
-    margin-top: 50px;
     padding: 40px 0;
+    margin-top:40px;
 }
-
 .b-footer .b-nav__logo {
     float: none;
 }
-
 .b-footer__company p {
     font: 600 12px 'Gotham', sans-serif;
     margin: 0 0 0 0;
 }
-
 .b-footer__content {
     float: right;
 }
-
 .b-footer__content-social {
     margin: 5px 0 15px 0;
     font-size: 23px;
     text-align: right;
 }
-
 .b-footer__content-social a {
     margin-right: 5px;
 }
-
 .b-footer__content-nav ul li {
     list-style: none;
     float: left;
     margin-left: 15px;
 }
-
 .b-footer__content-nav ul li a {
     font: 400 12px "Gotham", 'Open Sans', sans-serif;
     color: #fff;
 }
-
 .hr-dark {
     border: 1px #ccc solid;
 }
-
 /*--------- SLIDER *--------*/
 .ui-slider {
     position: relative;
     text-align: left;
 }
-
 .ui-slider .ui-slider-handle {
     background-color: #00B289;
     position: absolute;
@@ -2459,7 +2454,6 @@ textarea[name=message] {
     -ms-touch-action: none;
     touch-action: none;
 }
-
 .ui-slider .ui-slider-range {
     position: absolute;
     z-index: 1;
@@ -2468,18 +2462,15 @@ textarea[name=message] {
     border: 0;
     background-position: 0 0;
 }
-
 /* support: IE8 - See #6727 */
 .ui-slider.ui-state-disabled .ui-slider-handle,
 .ui-slider.ui-state-disabled .ui-slider-range {
     filter: inherit;
 }
-
 .ui-slider-horizontal {
     height: .8em;
     background-color: #ccc;
 }
-
 .ui-slider-horizontal .ui-slider-handle {
     top: -.3em;
     margin-left: -.6em;
@@ -2524,9 +2515,15 @@ textarea[name=message] {
 }
 /*--------- SLIDER ENDS*--------*/
 /*-------- inbox ------*/
+.inbox-cont{
+    top: 0;
+    bottom: 0;
+    position: static;
+    height: 100vh;
+}
 .inbox-request {
     border: 1px solid #ccc;
-    height: 60vh;
+    height: 75vh;
     background-color: #fff;
 }
 .border{
@@ -2550,20 +2547,27 @@ textarea[name=message] {
     color: #D83B44!important;
     font-size: 18px;
 }
+.footer-padding{
+    
+}
 /*--------Media queries------*/
 @media screen and (max-width:991px){
     .search-box{
         height:100%;
     }
+    .margin-top-65{
+    }
 }
 @media screen and (max-width: 768px) {
+    .margin-top-65{
+        
+    }
     .navbar-responsive {
         display: none !important;
     }
     .tabs-title {
         display: inline-block !important;
     }
-
     .b-footer__content-social {
         text-align: center !important;
         margin-top: 20px !important;

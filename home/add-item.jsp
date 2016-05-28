@@ -3,6 +3,7 @@
     <%@page contentType="text/html"  pageEncoding="UTF-8"%>
     <head>
         <meta charset="utf-8"/>
+        <link rel="icon" type="image/png" href="/img/lendock-favicon.png">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Lendock</title>
@@ -14,22 +15,22 @@
         <!---Title--->
         <div class="container margin-top-65">
             <form action="/NewCar" method="post" enctype="multipart/form-data">
-                <h3 class="center">Add your car to Lendock Garage</h3>
-                <h3 class="center">You can earn money by listing car</h3>
+                <h3 class="center">NV Lendock qarajına əlavə et</h3>
+                <h3 class="center">NV icarə etməklə pul qazana bilərsiniz</h3>
                 <div class="row padding-top-bot">
                     <div class="col-xs-12 col-md-6">
                         <div class="form-group">
-                            <label for="manufacter">Select Manufacturer <span class="faded-text"></span></label>
+                            <label for="manufacter">İstehsalçı <span class="faded-text"></span></label>
                             <select id="make" class="form-control">
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="model">Select Model <span class="faded-text"></span></label>
+                            <label for="model">Model <span class="faded-text"></span></label>
                             <select id="model" name="model" class="form-control">
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Select Make Year <span class="faded-text"></span></label>
+                            <label>Modelin istehsal ili <span class="faded-text"></span></label>
                             <select class="form-control" type="text" name="myear" id="man-year">
                             </select>
                         </div>
@@ -186,9 +187,9 @@
                 <!---img upload-->
                 <div class="row padding-top-bot">
                     <div class="col-xs-12">
-                        <h3>Upload photos of car</h3>
+                        <h3>Şəkil yüklə</h3>
                         <div class="form-group">
-                            <label for="uploadImage">Add photos of your vehicle. It should be from 6 positions: Front, Back, Left Side, Right Side, Dashboard and Back Seats.</label>
+                            <label for="uploadImage">6 istiqamətdən çəkilməlidir: Qabaq, Arxa, Sol tərəf, Sag tərəf, Alətlər paneli və Arxa oturacaqlar</label>
                             <input class="btn btn-default"  type="file" name="photo" multiple="multiple" >
                         </div>
                     </div>
@@ -199,7 +200,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-6">
                         <div class="form-group">
-                            <label>Vehicle State Registry Number (example 10-XX-123)<span class="faded-text"></span></label>
+                            <label>Dövlət Qeydiyyət Nişanı Nömrəsi (məsələn 10-XX-123)<span class="faded-text"></span></label>
                             <input class="form-control" name="rnum" type="text"/>
                         </div>
                     </div>
@@ -207,19 +208,19 @@
 
                 <div class="row"><br/>
                     <div class="col-xs-12 center margin-bottom-20">
-                        <h4>Pressing "Next"  button will move you to Listings page.<a href="/home/cars.jsp">Garage!</a></h4>
+                        <h4>Buradan siz elan yerləşdirmə səhifəsinə keçəcəksiz</h4>
                     </div>
                     <div class="col-xs-offset-2 col-xs-4">
 
                     </div>
                     <div class="col-xs-4">
-                        <input class="btn btn-success add-item-submit" type="submit" value="Next">
+                        <input class="btn btn-success add-item-submit" type="submit" value="Əlavə et">
                     </div>
                     <br><br/>
                 </div>
             </form>
         </div>
-        <jsp:include page="/footer.html" />
+        <jsp:include page="/footer.jsp" />
         <script src="/js/bootstrap.fd.js"></script>
 
         <script>

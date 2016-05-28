@@ -4,6 +4,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8"/>
+        <link rel="icon" type="image/png" href="/img/lendock-favicon.png">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Lendock</title>
@@ -38,6 +39,6 @@
                 </div>
             </div>
         </div>
-        <jsp:include page="/footer.html"/>
+        <jsp:include page="/footer.jsp"/>
     </body>
 </html>

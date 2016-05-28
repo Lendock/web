@@ -14,7 +14,7 @@
                     <a href="#">
                         <div class="image-box" style="background-image: url(img/bmw1.jpg)">
                             <div class="item-price">
-                                <span class="azn">M</span>120/per day
+                                <span class="azn">M</span>120/günlük
                             </div>
                         </div>
                     </a>

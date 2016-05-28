@@ -1,4 +1,5 @@
-<footer class="b-footer">
+<meta charset="utf-8"/>
+<footer class="b-footer" id="footer">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-md-4">
@@ -18,11 +19,12 @@
                     </div>
                     <nav class="b-footer__content-nav">
                         <ul>
-                            <li><a href="/index.jsp">Home</a></li>
-                            <li><a href="#">Legal</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">About Us</a></li-->
-                            <li><a href="/contact.jsp">Contact</a></li>
+                            <li><a href="/index.jsp">Ana Səhifə</a></li>
+                            <li><a href="#">Yardım</a></li>
+                            <li><a href="#">Qanunvericilik</a></li>
+                            <li><a href="#">Bloq</a></li>
+                            <li><a href="#">Haqqımızda</a></li>
+                            <li><a href="/contact.jsp">Əlaqə</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -34,4 +36,4 @@
             </div>
         </div>
     </div>
-</footer><!--b-footer-->
+</footer>

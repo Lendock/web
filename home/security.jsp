@@ -1,8 +1,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page contentType="text/html charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="icon" type="image/png" href="/img/lendock-favicon.png">
         <meta charset="utf-8"/>
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -14,7 +15,7 @@
                 <jsp:include page="/header.jsp" />
             </c:when>
             <c:otherwise>
-                <jsp:include page="/header-no-login.html" />
+                <jsp:include page="/header-no-login.jsp" />
             </c:otherwise>
         </c:choose>
         <script>
@@ -59,35 +60,35 @@
                 <div class="col-sm-9 col-md-10">
                     <div class="row">
                         <ul class="nav nav-pills nav-justified tabs-border">
-                            <li><a href="/home/settings.jsp">Account</a></li>
-                            <li class="active"><a href="security.html">Security</a></li>
-                            <li><a href="verifications.html">Verifications</a></li>
-                            <li><a href="payment-method.html">Payment methods</a></li>
+                            <li><a href="/home/settings.jsp">Hesab</a></li>
+                            <li class="active"><a href="/home/security.jsp">Təhlükəsizlik</a></li>
+                            <li><a href="/home/verifications.jsp">Kimliyin Təstiqi</a></li>
+                            <li><a href="/home/payment-method.jsp">Ödəmə üsulu</a></li>
                         </ul>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
-                            <h3 class="margin-bottom-20">Update password</h3>
+                            <h3 class="margin-bottom-20">Şifrə yenilə</h3>
                             <form action="/UpdatePassword" method="post">
                                 <div class="form-group">
-                                    <label for="currentPass">Current password</label>
-                                    <input name="current-password" type="password" class="form-control" id="currentPass" placeholder="Password">
+                                    <label for="currentPass">Hazırki şifrə</label>
+                                    <input name="current-password" type="password" class="form-control" id="currentPass" placeholder="Şifrə">
                                 </div>
                                 <div class="form-group">
-                                    <label for="newPass">New password</label>
-                                    <input name="new-password" type="password" class="form-control" id="newPass" placeholder="Password">
+                                    <label for="newPass">Yeni şifrə</label>
+                                    <input name="new-password" type="password" class="form-control" id="newPass" placeholder="yeni şifrə">
                                 </div>
                                 <div class="form-group">
-                                    <label for="newPass2">Repeat new password</label>
-                                    <input type="password" class="form-control" id="newPass2" placeholder="Password">
+                                    <label for="newPass2">Şifrəni təsdiqlə</label>
+                                    <input type="password" class="form-control" id="newPass2" placeholder="şifrəni təsdiqlə">
                                 </div>
-                                <button type="submit" id="submit" class="btn btn-success">Update password</button>
+                                <button type="submit" id="submit" class="btn btn-success">Şifrəni yenilə</button>
                             </form>
                         </div>
                         <div class="col-xs-12 col-md-6">
                             <img class="center-block dashboard-notes-img" src="../img/password13.png">
                             <span class="dashboard-notes margin-30">Keep your password safe!</span>
-                            <span class="dashboard-notes">Your password should be at least 8 characters.  Use combination of letters, numbers and speasical characters.</span>
+                            <span class="dashboard-notes">Parol ən azı 8 simvoldan ibarət olmalıdır. Hərf, rəqəm və xüsusi simvollardan istifadə edin.</span>
                         </div>
                     </div>
                 </div>
@@ -112,6 +113,6 @@
             </div>
         </div>
         <!--**** Modal ENDS ****-->
-        <jsp:include page="/footer.html" />
+        <jsp:include page="/footer.jsp" />
     </body>
 </html>

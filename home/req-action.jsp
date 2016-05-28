@@ -4,6 +4,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8"/>
+        <link rel="icon" type="image/png" href="/img/lendock-favicon.png">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Lendock</title>
@@ -17,17 +18,16 @@
             <div class="row margin-top-65">
                 <div class="col-xs-12 col-sm-3 col-md-2">
                     <ul class="nav nav-pills nav-stacked dashboard-tabs" id="example-vert-tabs">
-                        <li class="tabs-title"><a href="/home/profile.jsp"><img class="tabs-icons" src="../img/profile.png"><br>Profile</a>
+                        <li class="tabs-title"><a href="/home/profile.jsp"><img class="tabs-icons" src="../img/profile.png"><br>Profil</a>
                         </li>
                         <li class="tabs-title active"><a href="/GetOutgoingRequests"><img class="tabs-icons"
-                                                                                   src="../img/borrow-icon-white.png"><br>My
-                                Borrowings</a></li>
+                                                                                   src="../img/borrow-icon-white.png"><br>Sifarişlərim</a></li>
                         <li class="tabs-title"><a href="/AllMyCars"><img class="tabs-icons"
                                                                          src="../img/vehicle.png"><br>Dock</a></li>
                         <li class="tabs-title"><a href="/GetWishlist"><img class="tabs-icons" src="../img/wishlist.png"><br>Wishlist</a>
                         </li>
                         <li class="tabs-title"><a href="/home/settings.jsp"><img class="tabs-icons"
-                                                                                 src="../img/tool.png"><br>Settings</a>
+                                                                                 src="../img/tool.png"><br>Tənzimləmələr</a>
                         </li>
                     </ul>
                 </div>
@@ -35,7 +35,7 @@
                     <div class="chat-wrapper">
                         <div class="menu">
                             <div class="back">
-                                <a href="/GetOutgoingRequests"><i style="color:#fff;" class="fa fa-arrow-left"></i><span> Back to My Borrowings</span></a>
+                                <a href="/GetOutgoingRequests"><i style="color:#fff;" class="fa fa-arrow-left"></i><span> Sifarişlərə qayıt</span></a>
                                 <!--img src="../img/ramiz.jpg" draggable="false"/-->
                             </div>
                             <!--div class="name">Ramiz Ismayilov</div>
@@ -51,10 +51,10 @@
                                 <form action="/NewMessage" method="post" name="send-message">
                                     <div class="col-xs-9 col-sm-9 col-md-10 no-padding-left">
                                         <input type="hidden" value="${param.rid}" name="rid" id="rid" >
-                                        <input name="message" class="textarea" type="text" placeholder="Type here!"/>
+                                        <input name="message" class="textarea" type="text" placeholder="Bura yazın"/>
                                     </div>
                                     <div class="col-xs-3 col-sm-3 col-md-2 no-padding-left">
-                                        <button class="send-message">Send</button>
+                                        <button class="send-message">Göndər</button>
                                     </div>
                                 </form>
                             </div>
@@ -71,9 +71,9 @@
                         </div>
                         <div class="col-xs-9 col-md-9 col-lg-10">
                             <div class="request-borrower-title">
-                                <a href="#" id="borrower-name">You</a>
-                                <span>&nbsp;requested</span>
+                                <a href="#" id="borrower-name">Siz</a>
                                 <span id="car-name">&nbsp; </span>
+                                <span>&nbsp;sifarş etdiniz</span>
                                 <div class="request-borrower-rating">
                                     <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
                                 </div>
@@ -87,16 +87,16 @@
                         <table class="table-approve">
                             <tbody>
                                 <tr class="back-white">
-                                    <td>Start Date</td>
-                                    <td>End Date</td>
+                                    <td>Götürülmə Tarixi</td>
+                                    <td>Qaytarılma Tarixi</td>
                                 </tr>
                                 <tr>
                                     <td id="start-date">${request.sDate}</td>
                                     <td id="end-date">${request.eDate}</td>
                                 </tr>
                                 <tr class="back-white">
-                                    <td>Price per day</td>
-                                    <td>Total</td>
+                                    <td>Qünlük qiymət</td>
+                                    <td>Ümumi</td>
                                 </tr>
                                 <tr>
                                     <td id="price"><span class="azn">M</span>${request.listing.price}</td>
@@ -133,7 +133,7 @@
                 </div>
             </div>
         </div>
-        <jsp:include page="/footer.html" />
+        <jsp:include page="/footer.jsp" />
 
         <script>
             $('#notificationTabs').on('click', '.nav-tabs a', function () {
@@ -171,8 +171,8 @@
                     $("#car-name").html(data.listing.car.Model.make.name + " " + data.listing.car.Model.name);
                     $("#start-date").html(data.sDate);
                     $("#end-date").html(data.eDate);
-                    $("#price").html("$" + data.listing.price);
-                    $("#total").html("$" + data.total);
+                    $("#price").html("<span class='azn'>M</span>" + data.listing.price);
+                    $("#total").html("<span class='azn'>M</span>" + data.total);
                     $(".sent-request-image").attr("src", "/data/cars/" + data.listing.car.Photos[0]);
                 });
                 $('form[name=send-message]').submit(function () {
@@ -206,24 +206,6 @@
                             //$(".messages-wrapper").scrollTop($(".chat").height());
                         });
                 }, 1000);
-            });
-        </script>
-        <script>
-            $(function () {home/profile.jsp
-                var scotchPanel = $('#scotch-panel').scotchPanel({
-                    containerSelector: 'body',
-                    direction: 'right',
-                    duration: 300,
-                    transition: 'ease',
-                    clickSelector: '.toggle-panel',
-                    distanceX: '70%',
-                    enableEscapeKey: true
-                });
-                $(window).resize(function () {
-                    if ($(window).width() >= 769 && $('.scotch-panel-canvas').hasClass('scotch-is-showing')) {
-                        scotchPanel.close();
-                    }
-                });
             });
         </script>
     </body>

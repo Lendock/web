@@ -31,6 +31,18 @@
         <filter-name>AccessFilter</filter-name>
         <url-pattern>/home/*</url-pattern>
     </filter-mapping>
+    <filter-mapping>
+        <filter-name>AccessFilter</filter-name>
+        <url-pattern>/NewWish</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>AccessFilter</filter-name>
+        <url-pattern>/RemoveWish</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>AccessFilter</filter-name>
+        <url-pattern>/GetWishlist</url-pattern>
+    </filter-mapping>
     <servlet>
         <servlet-name>NewUser</servlet-name>
         <servlet-class>com.lendock.user.NewUser</servlet-class>
