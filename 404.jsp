@@ -122,7 +122,7 @@
                 <p id="robot-text">Səhifə tapılmadı</p>
                 <p>Başqa səhifələrə keç</p>
                 <div class="robot-buttons">
-                    <a class="robot-buttons" href="/index.jsp">Ana səhifə</a>
+                    <a class="robot-buttons" href="/index.jsp">Ata səhifə</a>
                 </div>
             </div>
             <div class="clear"></div>

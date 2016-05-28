@@ -122,7 +122,7 @@
                 <p id="robot-text">Server qatıqlayır :/</p>
                 <p>Başqa səhifələrə keç</p>
                 <div class="robot-buttons">
-                    <a class="robot-buttons" href="/index.jsp">Ana səhifə</a>
+                    <a class="robot-buttons" href="/index.jsp">Ata səhifə</a>
                 </div>
             </div>
             <div class="clear"></div>
